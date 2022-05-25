@@ -4,6 +4,16 @@ body {
 }
 
 body {
+  @extend %mont-400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: $default;
+}
+
+a{
+  display: inline-block;
+  color: inherit;
 }
 
 .wrapper {
@@ -18,4 +28,16 @@ body {
 
 .footer {
   flex: 0 0 auto;
+}
+
+.container-fluid {
+  max-width: 1340px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1115px;
+  padding: 0 15px;
+  margin: 0 auto;
 }

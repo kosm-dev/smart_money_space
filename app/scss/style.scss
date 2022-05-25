@@ -4,4 +4,108 @@
 @import "libs";
 @import "global";
 
+.header {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+  }
+  &__menu {
+    margin: 0 auto;
+  }
+  &__lang {
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 15px 48px 15px 25px;
+    margin-left: 47px;
+    background-color: $accent;
+    @extend %mont-700;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  &__link::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    transform: translateY(-50%);
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/icons/arrow-btn.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.logo {
+  &__img {
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item + .menu__list-item {
+    margin-left: 35px;
+  }
+  &__list-link {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: $default-2;
+  }
+  &__list-link--special{
+    position: relative;
+    padding-right: 10px;
+  }
+  &__list-link--special::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-image: url('../images/icons/clock.svg');
+    background-repeat: no-repeat;
+  }
+}
+.lang {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 15px;
+  @extend %mont-400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: $default-2;
+  &__icon{
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+  }
+}
+.lang::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 9px;
+  height: 6px;
+  background-image: url('../images/icons/angle-down.svg');
+  background-repeat: no-repeat;
+}
+
 @import "media";
